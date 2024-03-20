@@ -18,19 +18,19 @@ RUN apt-get update && apt-get install -y -q --no-install-recommends \
 
 USER web
 WORKDIR /home/web/code/
-COPY --chown=web:web ../requirements.txt requirements.txt
+COPY --chown=web:web requirements.txt requirements.txt
 
 USER root
 RUN pip install --no-cache-dir -r requirements.txt
 
-COPY --chown=web:web ./docker/entrypoint.sh /usr/local/bin/entrypoint.sh
+COPY --chown=web:web ./entrypoint.sh /usr/local/bin/entrypoint.sh
 RUN chmod +x /usr/local/bin/entrypoint.sh
 USER web
 ENTRYPOINT ["entrypoint.sh"]
 
 
 FROM base as dev
-COPY --chown=web:web ./docker/start-server.sh /usr/local/bin/start-server.sh
+COPY --chown=web:web ./start-server.sh /usr/local/bin/start-server.sh
 USER root
 RUN chmod +x /usr/local/bin/start-server.sh
 USER web

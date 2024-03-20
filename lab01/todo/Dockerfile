@@ -13,7 +13,7 @@ WORKDIR /app
 COPY --chown=web:web ./requirements.txt requirements.txt
 USER root
 RUN pip install --no-cache-dir -r requirements.txt
-COPY --chown=web:web ./docker/entrypoint.sh /usr/local/bin/entrypoint.sh
+COPY --chown=web:web ./entrypoint.sh /usr/local/bin/entrypoint.sh
 RUN chmod +x /usr/local/bin/entrypoint.sh
 USER web
 ENTRYPOINT ["entrypoint.sh"]

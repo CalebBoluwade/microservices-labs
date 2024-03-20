@@ -28,7 +28,11 @@ services:
       - backend_todo_network
 
   auth:
-    image: msalab01/auth:v1
+    # image: msalab01/auth:v1
+
+    build: 
+      context: ./auth/
+      dockerfile: ./Dockerfile
     restart: always
     depends_on:
       - auth_db
@@ -48,7 +52,10 @@ services:
       - frontend
 
   todo:
-    image: msalab01/todo:v1
+    # image: msalab01/todo:v1
+    build: 
+      context: ./todo/
+      dockerfile: ./Dockerfile
     restart: always
     depends_on:
       - todo_db
@@ -71,7 +78,12 @@ services:
       - frontend
       
   webapp:
-    image: msalab01/webapp:v1
+    # image: msalab01/webapp:v1
+
+    build: 
+      context: ./frontend/
+      dockerfile: ./Dockerfile
+
     restart: always
     ports:
       - 80:80
