@@ -1,3 +1,4 @@
+<!-- eslint-disable vue/multi-word-component-names -->
 <template>
     <div
         class="border rounded border-solid border-gray-300 px-4 py-4 text-neutral-900 bg-white shadow-xl w-2/3 flex justify-between mb-5 m-auto"

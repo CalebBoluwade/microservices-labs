@@ -1,3 +1,4 @@
+<!-- eslint-disable vue/multi-word-component-names -->
 <template>
   <div class="w-full shadow flex justify-between px-3 py-4">
       <span class="font-bold text-md px-3 text-neutral-900">TODOApp</span>

@@ -1,3 +1,4 @@
+<!-- eslint-disable vue/multi-word-component-names -->
 <template>
   <div class="h-screen w-full flex justify-center items-center">
       <div class="w-1/2">
@@ -50,7 +51,7 @@ export default {
             })
             .then((res) => {
                 sessionStorage.setItem('jwt', res.data.access)
-                this.$router.push({name: 'Home'});
+                this.$router.push({name: 'Home_'});
             })
 
         }

@@ -1,3 +1,4 @@
+<!-- eslint-disable vue/multi-word-component-names -->
 <template>
     <div id="todolistContainerNew" class="mt-10">
         <Task 

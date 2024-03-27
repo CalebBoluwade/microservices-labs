@@ -1,3 +1,4 @@
+<!-- eslint-disable vue/multi-word-component-names -->
 <template>
   <div class="h-screen w-full flex justify-center items-center">
       <div class="w-1/2">

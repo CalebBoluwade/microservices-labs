@@ -1,3 +1,4 @@
+<!-- eslint-disable vue/multi-word-component-names -->
 <template>
   <TheNavbar />
   <section class="w-full mt-10 flex justify-center">
@@ -44,7 +45,7 @@ import TheNavbar from '../components/TheNavbar.vue';
 import { TODO_API } from '@/api/todo/http-common';
 
 export default {
-    name: "Home",
+    name: "Home_",
     emits: ["onEmitCompleted"],
     components: { TaskList, TheNavbar },
     data() {
